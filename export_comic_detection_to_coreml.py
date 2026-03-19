@@ -2,11 +2,15 @@
 """
 Export a comic / manga speech-bubble detection model to Core ML (.mlpackage).
 
-This script is meant to run on a Mac with Python 3.10+ using the **repo-root
-virtual environment** (./.venv): run ./setup_python_env.sh once, then either
-`source .venv/bin/activate` or `.venv/bin/python export_comic_detection_to_coreml.py`.
-Install deps via requirements.txt in that env. The app expects a bundled
-model named ComicBubbleDetector.mlpackage (or compiled mlmodelc).
+For an end-to-end path (YOLOv8 train → Core ML → Xcode), use **train_comic_bubble_yolo.py**
+with **./setup_train_env.sh** (see `training/README.md`).
+
+If you already downloaded a **`.pt`** to `training/pretrained/` (e.g. `comic_speechbubble_s_yolov8_v1.pt`),
+that is **not** Core ML yet — run **`export-coreml`** in `.venv-train`, then **`prepare_mlpackage_for_xcode.py --from-assets`** (see `assets/README.md`).
+
+This file is a shorter reference / `coremltools --check` helper for the **./.venv** env:
+run `./setup_python_env.sh`, then `.venv/bin/python export_comic_detection_to_coreml.py`.
+The iOS app expects a bundled model named ComicBubbleDetector.mlpackage (or compiled mlmodelc).
 
 Typical sources (you must satisfy each model's license):
   - YOLOv8 family fine-tuned on comic bubbles (e.g. Hugging Face / community repos)

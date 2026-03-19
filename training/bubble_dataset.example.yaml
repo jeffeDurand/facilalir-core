@@ -1,0 +1,18 @@
+# YOLOv8 dataset config — COPY and edit paths to match your layout.
+# Ultralytics docs: https://docs.ultralytics.com/datasets/
+
+# Root of the dataset (absolute or relative to this file)
+path: data
+train: images/train
+val: images/val
+# test: images/test   # optional
+
+# Class names (bubble / speech-balloon detection — single class is common)
+names:
+  0: bubble
+
+# Expected layout under `path/`:
+#   images/train/*.jpg
+#   labels/train/*.txt   # YOLO label files (same stem as image)
+#   images/val/*.jpg
+#   labels/val/*.txt

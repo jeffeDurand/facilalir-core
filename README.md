@@ -23,6 +23,7 @@ git submodule update --init --recursive
 
 - **App** (submodule): [Facilalir/Facilalir.xcodeproj](Facilalir/Facilalir.xcodeproj) — SwiftUI, MVVM, `Info-additions.plist` merged with generated keys (no ATS exceptions; no networking code).
 - **Python tooling** (repo root): `export_comic_detection_to_coreml.py`, `prepare_mlpackage_for_xcode.py`, `requirements.txt` — optional Core ML bubble-detection pipeline. **Use the root virtual env** (`.venv/`); see below.
+- **YOLO / Core ML** (optional): [`train_comic_bubble_yolo.py`](train_comic_bubble_yolo.py) — **pretrained Hugging Face presets** (`list-pretrained`, `download-pretrained`, `export-pretrained-coreml`) or train your own; see [`training/README.md`](training/README.md). Use [`setup_train_env.sh`](setup_train_env.sh) + [`requirements-train.txt`](requirements-train.txt) and **`.venv-train`**. Optional **`.env`** for `HF_TOKEN` etc. ([`.env.example`](.env.example)).
 - **Assets** (repo root): [`assets/`](assets/) — drop optional **`ComicBubbleDetector.mlpackage`** here, then run `prepare_mlpackage_for_xcode.py --from-assets` (see [`assets/README.md`](assets/README.md)). Large bundles are gitignored.
 - **Fonts**: OpenDyslexic (SIL-OFL) under `Facilalir/Facilalir/Resources/Fonts/`.
 

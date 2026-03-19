@@ -2,6 +2,17 @@
 .cursor/
 .vscode/
 
+# Secrets (see .env.example)
+.env
+
+# YOLO / Ultralytics outputs & local datasets
+runs/
+training/runs/
+training/data/*
+!training/data/README.md
+training/pretrained/*
+!training/pretrained/README.md
+
 # Local ML / large binaries in assets/ (see assets/README.md)
 assets/ComicBubbleDetector.mlpackage
 assets/**/*.mlpackage
@@ -9,6 +20,7 @@ assets/**/*.mlmodelc
 
 # Python (repo-root tooling: Core ML export scripts)
 .venv/
+.venv-train/
 venv/
 __pycache__/
 *.py[cod]
