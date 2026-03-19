@@ -2,6 +2,11 @@
 .cursor/
 .vscode/
 
+# Local ML / large binaries in assets/ (see assets/README.md)
+assets/ComicBubbleDetector.mlpackage
+assets/**/*.mlpackage
+assets/**/*.mlmodelc
+
 # Python (repo-root tooling: Core ML export scripts)
 .venv/
 venv/
