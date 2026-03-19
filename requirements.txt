@@ -1,0 +1,5 @@
+# Install into repo-root venv only: ./setup_python_env.sh
+# Optional tooling for export_comic_detection_to_coreml.py (run on macOS).
+coremltools>=8.0
+torch>=2.0
+# ultralytics>=8.0  # uncomment if exporting from YOLOv8 weights

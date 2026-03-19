@@ -1,0 +1,16 @@
+# Editor / local
+.cursor/
+.vscode/
+
+# Python (repo-root tooling: Core ML export scripts)
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+dist/
+build/
